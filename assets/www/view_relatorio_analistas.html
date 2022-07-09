@@ -1,0 +1,43 @@
+<div class="page">
+	<div class="header indigo-900 cover blend-soft-light no-border">
+		<div class="left">
+			<button class="icon ion-ios-arrow-back" onclick="backPage();"></button>
+		</div>
+		<h1 class="title">Relatório Analistas</h1>
+		<div class="right" data="RELATORIO_ANALISTAS">
+			<button class="icon ion-headphone" onclick="window.location.href = '${link_podcast}'; "></button>
+			<button class="icon ion-android-share-alt" onclick="window.location.href = 'https://api.whatsapp.com/send?text=http://npcmobile.com.br/arquivos_relatorios/${arquivo}';"></button>
+				<button onclick="window.location.href = 'http://npcmobile.com.br/arquivos_relatorios/${arquivo}'" class="icon ion-ios-cloud-download"></button>
+		</div>
+	</div>
+	
+	<div class="content has-header" data="RELATORIO_ANALISTAS">
+		<h1 class="align-center" style="margin-top: 10px; font-size: 21px; color: blue; font-weight: bold;">
+			${titulo}
+		</h1>
+		<h2 class="align-left" style="margin-top: 20px; padding: 10px; font-weight: bold; text-decoration: underline;">INTRODUÇÃO</h2>
+		<p style="padding: 10px; margin-top: -10px; text-align: justify;">
+			${introducao}
+		</p>
+		<h2 class="align-left" style="padding: 10px; font-weight: bold; text-decoration: underline;">COTAÇÃO:</h2>
+		<p style="padding: 10px; margin-top: -10px; text-align: justify;">
+			${cotacao}
+		</p>
+		${img_grafico_cotacao}
+		<p style="padding: 10px; margin-top: -10px; text-align: justify;">
+			<span style="font-weight: bold;">FONTE:</span> ${fonte_grafico_cotacao}
+		</p>
+		<h2 class="align-left" style="padding: 10px; font-weight: bold; text-decoration: underline;">CONSIDERAÇÕES:</h2>
+		<p style="padding: 10px; margin-top: -10px; text-align: justify;">
+			${consideracoes}
+		</p>
+		<h2 class="align-left" style="padding: 10px; font-weight: bold; text-decoration: underline;">FONTES:</h2>
+		<p style="padding: 10px; margin-top: -10px; text-align: justify;">
+			${links_fontes}
+		</p>
+		<h2 class="align-left" style="padding: 10px;"><span style="font-weight: bold;">Coordenador do Projeto:</span> ${creditos_coordenador}</h2>
+		<h2 class="align-left" style="padding: 10px;"><span style="font-weight: bold;">Equipe de Analistas do Setor:</span> ${credito_analistas}</h2>
+		<h2 class="align-left" style="padding: 10px;"><span style="font-weight: bold;">Desenvolvedor do Aplicativo:</span> ${creditos_desenvolvedor} </h2>
+		<h2 class="align-left" style="padding: 10px;"><span style="font-weight: bold;">Documentação do Aplicativo:</span> ${creditos_documentacao}</h2>
+	</div>
+</div>

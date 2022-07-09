@@ -1,0 +1,53 @@
+<div class="page">
+	<div class="header indigo-900 cover blend-soft-light no-border">
+		<div class="left">
+			<button class="icon ion-ios-arrow-back" onclick="backPage()"></button>
+		</div>
+		<h1 class="title align-center" style="font-weight: bold;">LOGIN</h1>
+	</div>
+
+	<div class="content">
+		<div id="backAzul" style="height: 50%;" class="cover indigo-900"></div>
+
+		<img src="http://www.unisepe.com.br/hotsite/assets/img/logo_branco.png" style="margin-top: -65%; position: absolute; left: 19%; width: 65%;">
+		<div class="col " style="margin-top: -103px;padding: 10px;">
+			<div class="list radius white" style="height: 206px; box-shadow: -3px 0px 14px rgba(0, 0, 0, 0.54);">
+
+				<div class="item no-border">
+					<label class="text-black">RA</label>
+					<input type="number" class="input_login" style="padding: 6px;" id="RA" placeholder="Digite seu RA" />
+				</div>
+				<div class="item no-border">
+					<label class="text-black">Senha</label>
+					<input type="password" class="input_login" style="padding: 6px;" id="senha" placeholder="Digite seu CPF" />
+				</div>
+				<div class="item no-border" style="margin-top: 86px;">
+					<input type="checkbox" class="left switch blue" value="1" id="chk_autoLogin"/>
+					<label for="chk_autoLogin" class="left">Lembrar Dados</label>
+				</div>
+				<div class="item no-border">
+					<button class="left small text-white margin" style="background-color: #010274;height: 28px;margin-right: -18px;margin-top: -55px;border-radius: 5px;float: right;" onclick="openPage('cadastro_aluno');">
+						<i class="ion-key" style="font-size: 18px;"></i>Primeiro Acesso
+					</button>
+				</div>
+				<div class="item">
+					<p class="right text-black small-text text-bold float-bottom-left" style="margin-top: -15px;">v 1.1.1</p>
+
+				</div>
+				<a href="http://portal.unisepe.com.br/univr/ciencias-contabeis/">
+					<center>
+						<img style="margin-top: 20px;" src="img/logo_ct.png">
+					</center>
+					<p style="text-align: center; font-weight: bold; font-size: 18px;">Ciências Contábeis</p>
+				</a>
+				<p style="color: #000; text-align: center;">Desenvolvido por<a href="https://linkedin.com/in/bruno-m-085827109/" style="color: blue; font-weight: bold;"> Bruno Morais</a></p>
+			</div>
+		</div>
+		<center>
+			<button class="radius full center" style="background-color: blue; color: #fff; width: 200px; margin-top: -32px; border-radius: 30px; box-shadow: -3px 0px 14px rgba(0, 0, 0, 0.54);" onclick="login()" id="btn_login">
+				Fazer Login
+			</button>
+		</center>
+	</div>
+
+</div>

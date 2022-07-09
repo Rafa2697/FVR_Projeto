@@ -1,0 +1,402 @@
+<div class="page">
+	<div class="header indigo-900 cover blend-soft-light no-border">
+		<div class="left">
+			<button class="icon ion-ios-arrow-back" onclick="backPage()"></button>
+		</div>
+		<h1 class="title align-center">Cadastros</h1>
+	</div>
+
+	<div class="content has-header">
+		<div class="list">
+			<div class="item">
+				<select id="tipo" onchange="tipo();">
+					<option selected disabled>Selecione o tipo de cadastro</option>
+					<option value="Produto">Produto</option>
+					<!-- <option value="Supermercado">Supermercado</option> -->
+					<option value="Estabelecimento">Estabelecimento</option>
+				</select>
+			</div>
+
+			<div id="tipo_text" style="display: none; margin-top: 20px; text-align: center; font-size: 18px; font-weight: bold; text-decoration: underline;"></div>
+
+			<div id="produto_item" style="display: none;">
+				<div class="item" id="tipo_produto">
+					<label class="text">Tipo do produto</label>
+					<select id="cad_produto_item">
+						<option selected disabled value="0">Selecione o tipo do produto</option>
+						<option value="ACOUGUE">AÇOUGUE</option>
+						<option value="COMBUSTIVEL">COMBUSTÍVEL</option>
+						<option value="GAS">GAS</option>
+						<option value="PADARIA">PADÁRIA</option>
+						<option value="SUPERMERCADO">SUPERMERCADO</option>
+						<option value="PAPELARIA">MATERIAL ESCOLAR</option>
+						<option value="VAREJAO">FEIRA LIVRE</option>
+					</select>
+				</div>
+
+				<div class="item" id="tipo_nomeProduto" >
+					<label class="text">Nome do produto</label>
+					<input type="text" name="cad_nomeProduto_item" id="cad_nomeProduto_item" placeholder="Digite o nome do produto" required>
+				</div>
+
+				<div class="item" id="btn_cadTipo">
+					<button class="green full radius" onclick="cadTipos('cad_produto');">Solicitar Cadastro</button>
+				</div>
+			</div>
+
+			<!-- <div id="mercado_item" style="display: none;">
+				<div class="item" id="tipo_Mercado" >
+					<label class="text">Nome Supermercado</label>
+					<input type="text" name="cad_nomeMercado" id="cad_nomeMercado_item" placeholder="Digite o nome do mercado" required>
+				</div>
+				<div class="item" id="tipo_Mercado2">
+					<select name="cad_cidade" id="cad_cidade_item">
+						<option selected="" disabled="" value="0">Selecione uma cidade</option>
+						<option value="CAJATI">CAJATI</option>
+						<option value="CANANÉIA">CANANÉIA</option>
+						<option value="ELDORADO">ELDORADO</option>
+						<option value="IGUAPE">IGUAPE</option>
+						<option value="ILHA COMPRIDA">ILHA COMPRIDA</option>
+						<option value="ITANHAÉM">ITANHAÉM</option>
+						<option value="JACUPIRANGA">JACUPIRANGA</option>
+						<option value="JUQUIÁ">JUQUIÁ</option>
+						<option value="MIRACATU">MIRACATU</option>
+						<option value="PARIQUERA-AÇU">PARIQUERA-AÇU</option>
+						<option value="PEDRO DE TOLEDO">PEDRO DE TOLEDO</option>
+						<option value="REGISTRO">REGISTRO</option>
+						<option value="SETE BARRAS">SETE BARRAS</option>
+					</select>
+				</div>
+				<div class="item" id="tipo_Mercado3">
+					<label class="text">Bairro</label>
+					<input type="text" name="cad_bairro" id="cad_bairro_item" placeholder="Digite o nome do bairro" required>
+				</div>
+				<div class="item" id="tipo_Mercado4">
+					<label class="text">Rua</label>
+					<input type="text" name="cad_rua" id="cad_rua_item" placeholder="Digite o nome da rua" required>
+				</div>
+				<div class="item" id="tipo_Mercado5">
+					<label class="text">Número</label>
+					<input type="text" name="cad_numero" id="cad_numero_item" placeholder="Digite o número" required>
+				</div>
+				<div class="item" id="tipo_Mercado6">
+					<label class="text">Complemento</label>
+					<input type="text" name="cad_complemento" id="cad_complemento_item" placeholder="Digite o complemento" required>
+				</div>
+
+				<div class="item" id="btn_cadTipo">
+					<button class="green full radius" onclick="cadTipos('cad_mercado');">Solicitar Cadastro</button>
+				</div>
+			</div> -->
+
+			<div id="estabelecimento_item" style="display: none;">
+				<div class="item" id="">
+					<select name="cad_tipoEL" id="cad_tipoEL">
+						<option selected="" disabled="" value="0">Selecione um tipo de estabelecimento</option>
+						<option value="ACOUGUE">AÇOUGUE</option>
+						<option value="COMBUSTIVEL">COMBUSTÍVEL</option>
+<!-- 						<option value="LOJAS ELETRODOMESTICOS">LOJAS ELETRODOMÉSTICOS</option> -->
+						<option value="PADARIA">PADÁRIA</option>
+						<option value="GAS">GAS</option>
+						<option value="SUPERMERCADO">SUPERMERCADO</option>
+						<option value="PAPELARIA">MATERIAL ESCOLAR</option>
+						<option value="VAREJAO">FEIRA LIVRE</option>
+					</select>
+				</div>
+				<div class="item" id="tipo_Mercado">
+					<label class="text">Nome Estabelecimento</label>
+					<input type="text" name="cad_nomeMercado" id="cad_nomeMercado_item_el" placeholder="Digite o nome do estabelecimento" required>
+				</div>
+				<div class="item" id="tipo_Mercado2">
+					<select name="cad_cidade" id="cad_cidade_item_el">
+						<option selected="" disabled="" value="0">Selecione uma cidade</option>
+						<option value="CAJATI">CAJATI</option>
+						<option value="CANANÉIA">CANANÉIA</option>
+						<option value="ELDORADO">ELDORADO</option>
+						<option value="IGUAPE">IGUAPE</option>
+						<option value="ILHA COMPRIDA">ILHA COMPRIDA</option>
+						<option value="ITANHAÉM">ITANHAÉM</option>
+						<option value="JACUPIRANGA">JACUPIRANGA</option>
+						<option value="JUQUIÁ">JUQUIÁ</option>
+						<option value="MIRACATU">MIRACATU</option>
+						<option value="PARIQUERA-AÇU">PARIQUERA-AÇU</option>
+						<option value="PEDRO DE TOLEDO">PEDRO DE TOLEDO</option>
+						<option value="REGISTRO">REGISTRO</option>
+						<option value="SETE BARRAS">SETE BARRAS</option>
+					</select>
+				</div>
+				<div class="item" id="tipo_Mercado3">
+					<label class="text">Bairro</label>
+					<input type="text" name="cad_bairro" id="cad_bairro_item_el" placeholder="Digite o nome do bairro" required>
+				</div>
+				<div class="item" id="tipo_Mercado4">
+					<label class="text">Rua</label>
+					<input type="text" name="cad_rua" id="cad_rua_item_el" placeholder="Digite o nome da rua" required>
+				</div>
+				<div class="item" id="tipo_Mercado5">
+					<label class="text">Número</label>
+					<input type="number" name="cad_numero" id="cad_numero_item_el" placeholder="Digite o número" required>
+				</div>
+				<div class="item" id="tipo_Mercado6">
+					<label class="text">Complemento</label>
+					<input type="text" name="cad_complemento" id="cad_complemento_item_el" placeholder="Digite o complemento" required>
+				</div>
+
+				<div class="item" id="btn_cadTipo">
+					<button class="green full radius" onclick="cadTipos('cad_estabelecimento');">Solicitar Cadastro</button>
+				</div>
+			</div>
+			
+
+			<!--  -->
+			<!-- <div class="item" id="tipo_nomeMarca" style="display: none;">
+				<label class="text">Nome da Marca</label>
+				<input type="text" name="cad_esta" id="cad_esta" placeholder="Digite o nome do estabelecimento" required>
+			</div -->
+			<!--  -->
+			
+
+			<!--  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<!-- ************************* SUPERMERCADO ******************************* -->
+			<div id="supermercado" style="display: none;">
+				<div class="item" id="tipo_Mercado">
+					<label class="text">Nome Supermercado</label>
+					<input type="text" name="cad_nomeMercado" id="cad_nomeMercado" placeholder="Digite o nome do mercado" required>
+				</div>
+				<!--  -->
+				<div class="item" id="tipo_Mercado2">
+					<select name="cad_cidade" id="cad_cidade">
+						<option selected="" disabled="" value="0">Selecione uma cidade</option>
+						<option value="CAJATI">CAJATI</option>
+						<option value="CANANÉIA">CANANÉIA</option>
+						<option value="ELDORADO">ELDORADO</option>
+						<option value="IGUAPE">IGUAPE</option>
+						<option value="ILHA COMPRIDA">ILHA COMPRIDA</option>
+						<option value="ITANHAÉM">ITANHAÉM</option>
+						<option value="JACUPIRANGA">JACUPIRANGA</option>
+						<option value="JUQUIÁ">JUQUIÁ</option>
+						<option value="MIRACATU">MIRACATU</option>
+						<option value="PARIQUERA-AÇU">PARIQUERA-AÇU</option>
+						<option value="PEDRO DE TOLEDO">PEDRO DE TOLEDO</option>
+						<option value="REGISTRO">REGISTRO</option>
+						<option value="SETE BARRAS">SETE BARRAS</option>
+					</select>
+				</div>
+				
+				<div class="item" id="btn_cadTipo">
+					<button class="green full radius" onclick="cadTipos();">Solicitar Cadastro</button>
+				</div>
+			</div>
+			
+			<!-- ************************** COMBUSTIVEL ********************************** -->
+			<div id="combustivel" style="display: none;">
+				<div class="item" id="">
+					<label class="text">Nome do Posto</label>
+					<input type="text" name="cad_nomeMercado" id="cad_nomeMercado" placeholder="Digite o nome do posto" required>
+				</div>
+				<!--  -->
+				<div class="item" id="">
+					<select name="cad_cidade" id="">
+						<option selected="" disabled="" value="0">Selecione uma cidade</option>
+						<option value="CAJATI">CAJATI</option>
+						<option value="CANANÉIA">CANANÉIA</option>
+						<option value="ELDORADO">ELDORADO</option>
+						<option value="IGUAPE">IGUAPE</option>
+						<option value="ILHA COMPRIDA">ILHA COMPRIDA</option>
+						<option value="ITANHAÉM">ITANHAÉM</option>
+						<option value="JACUPIRANGA">JACUPIRANGA</option>
+						<option value="JUQUIÁ">JUQUIÁ</option>
+						<option value="MIRACATU">MIRACATU</option>
+						<option value="PARIQUERA-AÇU">PARIQUERA-AÇU</option>
+						<option value="PEDRO DE TOLEDO">PEDRO DE TOLEDO</option>
+						<option value="REGISTRO">REGISTRO</option>
+						<option value="SETE BARRAS">SETE BARRAS</option>
+					</select>
+				</div>
+
+				<div class="item" id="">
+					<button class="green full radius" onclick="cadTipos();">Solicitar Cadastro</button>
+				</div>
+			</div>
+			
+			<!-- ************************** AÇOUGUE ********************************** -->
+			<div id="acougue" style="display: none;">
+				<div class="item" id="">
+					<label class="text">Nome do Açougue</label>
+					<input type="text" name="cad_nomeMercado" id="cad_nomeMercado" placeholder="Digite o nome do açougue" required>
+				</div>
+				<!--  -->
+				<div class="item" id="">
+					<select name="cad_cidade" id="">
+						<option selected="" disabled="" value="0">Selecione uma cidade</option>
+						<option value="CAJATI">CAJATI</option>
+						<option value="CANANÉIA">CANANÉIA</option>
+						<option value="ELDORADO">ELDORADO</option>
+						<option value="IGUAPE">IGUAPE</option>
+						<option value="ILHA COMPRIDA">ILHA COMPRIDA</option>
+						<option value="ITANHAÉM">ITANHAÉM</option>
+						<option value="JACUPIRANGA">JACUPIRANGA</option>
+						<option value="JUQUIÁ">JUQUIÁ</option>
+						<option value="MIRACATU">MIRACATU</option>
+						<option value="PARIQUERA-AÇU">PARIQUERA-AÇU</option>
+						<option value="PEDRO DE TOLEDO">PEDRO DE TOLEDO</option>
+						<option value="REGISTRO">REGISTRO</option>
+						<option value="SETE BARRAS">SETE BARRAS</option>
+					</select>
+				</div>
+
+				<div class="item" id="">
+					<button class="green full radius" onclick="cadTipos();">Solicitar Cadastro</button>
+				</div>
+			</div>
+
+			<!-- ************************** PADARIA ********************************** -->
+			<div id="padaria" style="display: none;">
+				<div class="item" id="">
+					<label class="text">Nome da Padaria</label>
+					<input type="text" name="cad_nomeMercado" id="cad_nomeMercado" placeholder="Digite o nome da padaria" required>
+				</div>
+				<!--  -->
+				<div class="item" id="">
+					<select name="cad_cidade" id="">
+						<option selected="" disabled="" value="0">Selecione uma cidade</option>
+						<option value="CAJATI">CAJATI</option>
+						<option value="CANANÉIA">CANANÉIA</option>
+						<option value="ELDORADO">ELDORADO</option>
+						<option value="IGUAPE">IGUAPE</option>
+						<option value="ILHA COMPRIDA">ILHA COMPRIDA</option>
+						<option value="ITANHAÉM">ITANHAÉM</option>
+						<option value="JACUPIRANGA">JACUPIRANGA</option>
+						<option value="JUQUIÁ">JUQUIÁ</option>
+						<option value="MIRACATU">MIRACATU</option>
+						<option value="PARIQUERA-AÇU">PARIQUERA-AÇU</option>
+						<option value="PEDRO DE TOLEDO">PEDRO DE TOLEDO</option>
+						<option value="REGISTRO">REGISTRO</option>
+						<option value="SETE BARRAS">SETE BARRAS</option>
+					</select>
+				</div>
+
+				<div class="item" id="">
+					<button class="green full radius" onclick="cadTipos();">Solicitar Cadastro</button>
+				</div>
+			</div>
+
+			<!-- ************************** FEIRA LIVRE ********************************** -->
+			<div id="feira" style="display: none;">
+				<div class="item" id="">
+					<label class="text">Nome da Feira</label>
+					<input type="text" name="cad_nomeMercado" id="cad_nomeMercado" placeholder="Digite o nome da feira" required>
+				</div>
+				<!--  -->
+				<div class="item" id="">
+					<select name="cad_cidade" id="">
+						<option selected="" disabled="" value="0">Selecione uma cidade</option>
+						<option value="CAJATI">CAJATI</option>
+						<option value="CANANÉIA">CANANÉIA</option>
+						<option value="ELDORADO">ELDORADO</option>
+						<option value="IGUAPE">IGUAPE</option>
+						<option value="ILHA COMPRIDA">ILHA COMPRIDA</option>
+						<option value="ITANHAÉM">ITANHAÉM</option>
+						<option value="JACUPIRANGA">JACUPIRANGA</option>
+						<option value="JUQUIÁ">JUQUIÁ</option>
+						<option value="MIRACATU">MIRACATU</option>
+						<option value="PARIQUERA-AÇU">PARIQUERA-AÇU</option>
+						<option value="PEDRO DE TOLEDO">PEDRO DE TOLEDO</option>
+						<option value="REGISTRO">REGISTRO</option>
+						<option value="SETE BARRAS">SETE BARRAS</option>
+					</select>
+				</div>
+				<!--  -->
+				<div class="item" id="">
+					<button class="green full radius" onclick="cadTipos();">Solicitar Cadastro</button>
+				</div>
+			</div>
+
+			<!-- ************************** LINHA BRANCA ********************************** -->
+			<div id="linha_branca" style="display: none;">
+				<div class="item" id="">
+					<label class="text">Nome do Produto</label>
+					<input type="text" name="cad_nomeMercado" id="cad_nomeMercado" placeholder="Digite o nome do estabelecimento" required>
+				</div>
+				<!--  -->
+				<div class="item" id="">
+					<select name="cad_cidade" id="">
+						<option selected="" disabled="" value="0">Selecione uma cidade</option>
+						<option value="CAJATI">CAJATI</option>
+						<option value="CANANÉIA">CANANÉIA</option>
+						<option value="ELDORADO">ELDORADO</option>
+						<option value="IGUAPE">IGUAPE</option>
+						<option value="ILHA COMPRIDA">ILHA COMPRIDA</option>
+						<option value="ITANHAÉM">ITANHAÉM</option>
+						<option value="JACUPIRANGA">JACUPIRANGA</option>
+						<option value="JUQUIÁ">JUQUIÁ</option>
+						<option value="MIRACATU">MIRACATU</option>
+						<option value="PARIQUERA-AÇU">PARIQUERA-AÇU</option>
+						<option value="PEDRO DE TOLEDO">PEDRO DE TOLEDO</option>
+						<option value="REGISTRO">REGISTRO</option>
+						<option value="SETE BARRAS">SETE BARRAS</option>
+					</select>
+				</div>
+				<!--  -->
+				<div class="item" id="">
+					<button class="green full radius" onclick="cadTipos();">Solicitar Cadastro</button>
+				</div>
+			</div>
+
+			<!-- ************************** MATERIAL ESCOLAR ********************************** -->
+			<div id="material_escolar" style="display: none;">
+				<div class="item" id="">
+					<label class="text">Nome do Produto</label>
+					<input type="text" name="cad_nomeMercado" id="cad_nomeMercado" placeholder="Digite o nome do estabelecimento" required>
+				</div>
+
+				<div class="item" id="">
+					<select name="cad_cidade" id="">
+						<option selected="" disabled="" value="0">Selecione uma cidade</option>
+						<option value="CAJATI">CAJATI</option>
+						<option value="CANANÉIA">CANANÉIA</option>
+						<option value="ELDORADO">ELDORADO</option>
+						<option value="IGUAPE">IGUAPE</option>
+						<option value="ILHA COMPRIDA">ILHA COMPRIDA</option>
+						<option value="ITANHAÉM">ITANHAÉM</option>
+						<option value="JACUPIRANGA">JACUPIRANGA</option>
+						<option value="JUQUIÁ">JUQUIÁ</option>
+						<option value="MIRACATU">MIRACATU</option>
+						<option value="PARIQUERA-AÇU">PARIQUERA-AÇU</option>
+						<option value="PEDRO DE TOLEDO">PEDRO DE TOLEDO</option>
+						<option value="REGISTRO">REGISTRO</option>
+						<option value="SETE BARRAS">SETE BARRAS</option>
+					</select>
+				</div>
+
+				<div class="item" id="">
+					<button class="green full radius" onclick="cadTipos();">Solicitar Cadastro</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

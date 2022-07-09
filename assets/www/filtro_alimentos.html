@@ -1,0 +1,34 @@
+<div class="page">
+	<div class="header indigo-900 cover blend-soft-light no-border">
+		<div class="left">
+			<button class="icon ion-ios-arrow-back" onclick="backPage()"></button>
+		</div>
+		<h1 class="title align-center">Pesquisa Alimentos</h1>
+	</div>
+
+	<div class="content has-header">
+		<div class="list">
+			<div class="item">
+				<select onchange="search_dados('SUPERMERCADO');" id="select_cidade_mercados">
+					<option value="0">TODOS AS CIDADES</option>
+					<option data="LISTA_CIDADES_FILTRO" value="${nome_cidade}">${nome_cidade}</option>
+				</select>
+			</div>
+			<div class="item">
+				<select onchange="search_dados_v2('SUPERMERCADO');" id="select_cidade_mercadosv2">
+					<option value="0">TODOS OS MERCADOS</option>
+					<option data="LISTA_MERCADOS_FILTRO" value="${mercado}">${mercado}</option>
+				</select>
+			</div>
+
+			<div class="item" data="DADOS_FILTRO">
+				<h2 style="font-weight: bold;">${nome_item}</h2>
+				<p class="text-small padding text-grey">${cidade}</p>
+				<p class="text-small padding text-grey">${mercado}</p>
+				<div class="right">
+					<span class="text-small green radius padding">R$ ${preco_item}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

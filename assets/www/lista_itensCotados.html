@@ -1,0 +1,42 @@
+<div class="page">
+	<div class="header indigo-900 cover blend-soft-light no-border">
+		<div class="left">
+			<button class="icon ion-ios-arrow-back" onclick="zera_vetor();"></button>
+		</div>
+		<h1 class="title align-center">Itens Cotados</h1>
+	</div>
+
+	<div class="content has-header">
+		<div class="list padding">
+			<div class="item grey-50 mark border-blue margin-button shadow radius" data="ITENS_COTADOS">
+				<h2 style="font-weight: bold;">${nome_item}</h2>
+				<div class="right">
+					<table>
+						<tr>
+							<td>
+								<span class="text-small green radius padding">R$ ${preco_item}</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="item" data="cod_cotacao">
+				<table>
+					<tr>
+						<td>
+							<button class="green full radius" onclick="cotacao_aprovada(${b});">
+								Aprovar
+							</button>
+						</td>
+						<td>
+							<button class="red full text-white radius" onclick="cotacao_reprova(${b});">
+								Reprovar
+							</button>
+						</td>
+					</tr>
+				</table>
+			</div>	
+		</div>
+		
+	</div>
+</div>

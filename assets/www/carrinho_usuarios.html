@@ -1,0 +1,37 @@
+<div class="page">
+	<div class="header indigo-900 cover blend-soft-light no-border">
+		<div class="left">
+			<button class="icon ion-ios-arrow-back" onclick="backPage()"></button>
+		</div>
+		<h1 class="title align-center">Meu Carrinho</h1>
+	</div>
+
+	<div class="content has-header has-footer">
+		<div class="list padding">
+			<div class="item grey-50 mark border-blue margin-button shadow radius" data="VETOR">
+				<h2 style="font-weight: bold;">${nome_prod}</h2>
+				
+				<span class="text-small text-bold radius padding">Quantidade: ${quantidade}</span>
+				<div class="right">
+					
+					<table>
+						<tr>
+							<td>
+								<span class="text-small indigo radius padding">R$ ${total}</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="text-small blue radius padding">Média: ${media_prod}</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!-- <div class="list padding"> -->
+				<div class="footer indigo-900 shadow" data="TOTAL_CARRINHO">
+					<p style="margin-top: 13px; text-align: center;">Total: R$ ${total_all}</p>
+				</div>
+			<!-- </div> -->
+		</div>
+	</div>

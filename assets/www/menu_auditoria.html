@@ -1,0 +1,90 @@
+<div class="page">
+	<div class="header indigo-900 cover blend-soft-light no-border">
+		<div class="left">
+			<button class="icon ion-log-out" onclick="sair();"></button>
+		</div>
+		<h1 class="title align-center">Menu Auditoria</h1>
+		<div class="right">
+			<span data="TAM_CARRINHO" class="icon-badge text-small red radius padding" style="position: absolute; margin-left: 18px; margin-top: -8px; border-radius: 8px; z-index: 999; font-size: 12px;">${tamanho_carrinho}</span>
+			<button class="icon ion-android-cart" onclick="openPage('carrinho')"></button>
+		</div>
+	</div>
+
+	<div class="content has-header padding" style="margin-top: 10px;">
+		<div class="right">
+			<div class="padding border-blue shadow radius mark"style="width: 160px;" onclick="categorias_cadastros()">
+				<center>
+					<i class="ion-plus-circled" style="font-size: 20px;"></i>
+					<br>
+					<p class="text-strong">Cadastrar</p>
+				</center>
+			</div>
+		</div>
+
+		<div class="padding border-blue shadow radius mark"style="width: 160px;" onclick="openPage('categorias')">
+			<center>
+				<i class="ion-clipboard" style="font-size: 20px;"></i>
+				<br>
+				<p class="text-strong">Cotação</p>
+			</center>
+		</div>
+		<br>
+		<div class="right">
+			<div class="padding border-blue shadow radius mark"style="width: 160px;" onclick="openPage('categorias_validarCotacao');">
+				<center>
+					<i class="ion-clipboard" style="font-size: 20px;"></i>
+					<br>
+					<p class="text-strong">Validar<br>Cotações</p>
+				</center>
+			</div>
+		</div>
+
+		<div class="padding border-blue shadow radius mark"style="width: 160px;" onclick="lista_alunos();">
+			<center>
+				<i class="ion-person" style="font-size: 20px;"></i>
+				<br>
+				<p class="text-strong">Validar<br>Alunos</p>
+			</center>
+		</div>
+
+		<div class="right">
+			<div class="padding border-blue shadow radius mark"style="width: 160px; margin-top: 10px;" onclick="lista_itensProdutos_alunos('produtos');">
+				<center>
+					<i class="ion-android-cart" style="font-size: 20px;"></i>
+					<br>
+					<p class="text-strong">Validar<br>Produtos</p>
+				</center>
+			</div>
+		</div>
+
+		<div class="padding border-blue shadow radius mark"style="width: 160px; margin-top: 10px;" onclick="lista_itensEstabelecimentos_alunos('estabelecimentos');">
+			<center>
+				<i class="ion-pricetags" style="font-size: 20px;"></i>
+				<br>
+				<p class="text-strong">Validar<br>Estabelecimentos</p>
+			</center>
+		</div>
+
+		<!-- <div class="right"> -->
+			<!-- <div class="padding border-blue shadow radius mark"style="width: 160px; margin-top: 10px;" onclick="lista_itensMarcas_alunos('marcas');">
+				<center>
+					<i class="ion-pricetags" style="font-size: 20px;"></i>
+					<br>
+					<p class="text-strong">Validar<br>Estabelecimentos</p>
+				</center>
+			</div> -->
+			<!-- </div> -->
+
+			<!-- ALUNOS QUE REALIZARAM COTAÇÃO NO MES -->
+			<!-- <div class="right"> -->
+				<div class="padding border-blue shadow radius mark"style="width: 160px; margin-top: 9px;" onclick="cotacoes_realizadas()">
+					<center>
+						<i class="ion-pricetags" style="font-size: 20px;"></i>
+						<br>
+						<p class="text-strong">Cotações<br>Realizadas</p>
+					</center>
+				</div>
+				<!-- </div> -->
+
+			</div>
+		</div>

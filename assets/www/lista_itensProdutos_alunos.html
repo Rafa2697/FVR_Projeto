@@ -1,0 +1,29 @@
+<div class="page">
+	<div class="header indigo-900 cover blend-soft-light no-border">
+		<div class="left">
+			<button class="icon ion-ios-arrow-back" onclick="limpa_vetor()"></button>
+		</div>
+		<h1 class="title align-center" id="tituloProdutos">PRODUTOS</h1>
+	</div>
+
+	<div class="content has-header">
+		<div class="list">
+			<div class="item" data="LISTA_ITENS_ALUNOS">
+				<h2 style="font-weight: bold; font-size: 19px;">${nome}</h2>
+				<span class="text-small green radius padding">RA: ${ra}</span><br>
+				<span class="text-small blue radius padding">${nome_aluno}</span><br>
+				<span class="text-small orange-900 radius padding">Situação: ${situacao}</span>
+				<div class="right">
+					<table>
+						<tr>
+							<td><span class="icon ion-checkmark-round" style="color: green;" onclick="aprovar_itemProduto_aluno(${id}, 'produto')"></span></td>
+						</tr>
+						<tr>
+							<td><span class="icon ion-close-round" style="color: red;" onclick="reprovar_itemProduto_aluno(${id},'produto')"></span></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+*{
+	font-family: 'Varela Round', sans-serif;
+}
+
+.input_login{
+    border-bottom: 1px solid #ddd;
+    transition: .5s;
+}
+
+.input_login:focus{
+    border-bottom: 1px solid blue;
+    transition: .5s;
+}

@@ -1,0 +1,32 @@
+<div class="page">
+	<div class="header indigo-900 cover blend-soft-light no-border">
+		<div class="left">
+			<button class="icon ion-ios-arrow-back" onclick="backPage()"></button>
+		</div>
+		<div class="right">
+			<span data="TAM_CARRINHO" class="icon-badge text-small red radius padding" style="position: absolute; margin-left: 18px; margin-top: -8px; border-radius: 8px; z-index: 999; font-size: 12px;">${tamanho_carrinho}</span>
+			<button class="icon ion-android-cart" onclick="openPage('carrinho')"></button>
+		</div>
+		<h1 class="title align-center" id="nome_cat" data="LISTA_CIDADES">${titulo_cat}</h1>
+	</div>
+
+	<div class="content has-header">
+		<div class="list">
+			<div class="item">
+				<select id="cidades" onchange="carrega_mercado();">
+					<option selected disabled value="0">Selecione uma cidade</option>
+					<option data="LISTA_CIDADES" value="${nome_cidade}">${nome_cidade}</option>
+				</select>
+			</div>
+			<div class="item">
+				<select id="mercado" onchange="dados_mercados();">
+					<option selected disabled value="0" >Selecione um estabelecimento</option>
+					<option data="LISTA_EB" value="${nome_estabelecimentos}">${nome_estabelecimentos}</option>
+				</select>
+			</div>
+			<div class="item">
+				<button class="green full radius" onclick="itens();">Continuar <i class="ion-paper-airplane"></i></button>
+			</div>
+		</div>
+	</div>
+</div>

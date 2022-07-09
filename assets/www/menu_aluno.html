@@ -1,0 +1,51 @@
+<div class="page">
+	<div class="header indigo-900 cover blend-soft-light no-border">
+		<div class="left">
+			<button class="icon ion-log-out" onclick="sair();"></button>
+		</div>
+		<div class="right">
+			<span data="TAM_CARRINHO" class="icon-badge text-small red radius padding" style="position: absolute; margin-left: 18px; margin-top: -8px; border-radius: 8px; z-index: 999; font-size: 12px;">${tamanho_carrinho}</span>
+			<button class="icon ion-android-cart" onclick="openPage('carrinho')"></button>
+		</div>
+		<h1 class="title align-center">Menu Aluno</h1>
+	</div>
+
+	<div class="content has-header padding" style="margin-top: 10px;">
+		<div class="right">
+			<div class="padding border-blue shadow radius mark"style="width: 160px;" onclick="categorias_cadastros()">
+				<center>
+					<i class="ion-plus-circled" style="font-size: 20px;"></i>
+					<br>
+					<p class="text-strong">Cadastrar</p>
+				</center>
+			</div>
+		</div>
+
+		<div class="padding border-blue shadow radius mark"style="width: 160px;" onclick="openPage('categorias')">
+			<center>
+				<i class="ion-clipboard" style="font-size: 20px;"></i>
+				<br>
+				<p class="text-strong">Cotação</p>
+			</center>
+		</div>
+
+		<!-- <div class="padding border-blue shadow radius mark"style="width: 160px; margin-top: 9px;" onclick="openPage('relatorio_mes');">
+					<center>
+						<i class="ion-stats-bars" style="font-size: 20px;"></i>
+						<br>
+						<p class="text-strong">Relatório<br>Mês</p>
+					</center>
+				</div> -->
+
+				<!-- <div class="right"> -->
+			<div class="padding border-blue shadow radius mark"style="width: 160px; margin-top: 9px;" onclick="openPage('status_cotacao');">
+					<center>
+						<i class="ion-android-list" style="font-size: 20px;"></i>
+						<br>
+						<p class="text-strong">Status<br>Cotação</p>
+					</center>
+				</div>
+			<!-- </div> -->
+		</div>
+	</div>
+</div>

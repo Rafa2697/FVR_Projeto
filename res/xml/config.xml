@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" id="io.cordova.hellocordova" version="1.1.0">
+	<feature name="Whitelist">
+		<param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+		<param name="onload" value="true" />
+	</feature>
+	<feature name="Geolocation">
+		<param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
+	</feature>
+	<feature name="OneSignalPush">
+		<param name="android-package" value="com.plugin.gcm.OneSignalPush" />
+	</feature>
+	<name>IP-FVR	</name>
+	<description>" Aplicativo de cotação de preços da UNISEPE - FVR. "	</description>
+	<author email="dev@cordova.apache.org" href="http://cordova.io">" Criado por Bruno Pereira de Morais Gouveia Pinto, aluno de Análise e Desenvolvimento de Sistemas da UNISEPE - FVR. "	</author>
+	<content src="index.html" />
+	<access origin="*" />
+	<allow-intent href="http://*/*" />
+	<allow-intent href="https://*/*" />
+	<allow-intent href="tel:*" />
+	<allow-intent href="sms:*" />
+	<allow-intent href="mailto:*" />
+	<allow-intent href="geo:*" />
+	<allow-intent href="market:*" />
+	<preference name="loglevel" value="DEBUG" />
+	<preference name="DisallowOverscroll" value="true" />
+</widget>

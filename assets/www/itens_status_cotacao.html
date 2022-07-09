@@ -1,0 +1,22 @@
+<div class="page">
+	<div class="header indigo-900 cover blend-soft-light no-border">
+		<div class="left">
+			<button class="icon ion-ios-arrow-back" onclick="backPage()"></button>
+		</div>
+		<h1 class="title align-center">Lista dos Itens</h1>
+	</div>
+
+	<div class="content has-header">
+		<div class="list">
+			<div class="item" data="STATUS_COTACAO">
+				<h2 style="font-weight: bold;">${tipo}</h2>
+				<p class="text-small text-bold padding text-grey">${cidade}</p>
+				<p class="text-small text-bold padding text-grey">${mercado}</p>
+				<span class="text-small ${color} radius padding">${situacao}</span>
+                <div class="right">
+                    <i class="icon ion-ios-arrow-right" onclick="view_itens_alunos(${id_cotacao});"></i>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>

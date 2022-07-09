@@ -1,0 +1,25 @@
+<div class="page">
+	<div class="header indigo-900 cover blend-soft-light no-border">
+		<div class="left">
+			<button class="icon ion-ios-arrow-back" onclick="backPage()"></button>
+		</div>
+		<h1 class="title align-center">Minha Cotação</h1>
+	</div>
+
+	<div class="content has-header has-footer">
+		<div class="list">
+			<div class="item" data="DATA_ALL_PRODUTOS">
+				<h2 style="font-weight: bold; width: 67%;">${produto}</h2>
+				<p class="text-small text-bold padding text-black">Média do preço: <span class="text-small green radius padding">R$ ${media_item}</span></p>
+				<div class="right">
+					<i class="ion-android-add-circle" onclick="add_cart('${produto}',${media_item}, $$index); count_up($$index);" style="font-size: 30px; color: green;"></i>
+					<p style="padding-left: 4px; font-size: 18px;" id="item$$index">0</p>
+					<i class="ion-minus-circled" onclick="remove_cart('${produto}'); count_down($$index);" style="font-size: 29px; color: red;"></i>
+				</div>
+			</div>
+		</div>
+		<div class="footer indigo-900 shadow tab">
+			<button class="icon active" onclick="btn_finalizar();">Finalizar</button>
+		</div>
+	</div>
+</div>

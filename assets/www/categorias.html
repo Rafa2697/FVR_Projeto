@@ -1,0 +1,90 @@
+<div class="page">
+  <div class="header indigo-900 cover blend-soft-light no-border">
+    <div class="left">
+      <button class="icon ion-ios-arrow-back" onclick="backPage()"></button>
+    </div>
+    <h1 class="title align-center">Categorias</h1>
+    <div class="right">
+      <span data="TAM_CARRINHO" class="icon-badge text-small red radius padding" style="position: absolute; margin-left: 18px; margin-top: -8px; border-radius: 8px; z-index: 999; font-size: 12px;">${tamanho_carrinho}</span>
+      <button class="icon ion-android-cart" onclick="openPage('carrinho')"></button>
+    </div>
+  </div>
+
+  <div class="content has-header padding" style="margin-top: 10px;">
+    <div class="row">
+      <div class="col cover radius margin no-padding">
+        <div class="padding border-blue shadow radius mark" onclick="loading_categoria('COMBUSTIVEL');">
+          <center>
+            <i class="ion-soup-can" style=" font-size: 20px;"></i>
+            <br>
+            <p class="text-strong">Combustíveis</p>
+          </center>
+        </div>
+      </div>
+      <div class="col cover radius margin no-padding">
+        <div class="padding border-blue shadow radius mark" onclick="loading_categoria('SUPERMERCADO');">
+          <center>
+            <i class="ion-android-cart" style=" font-size: 20px;"></i>
+            <br>
+            <p class="text-strong">Supermercado</p>
+          </center>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col cover radius margin no-padding">
+        <div class="padding border-blue shadow radius mark" onclick="loading_categoria('ACOUGUE');">
+          <center>
+            <i class="ion-android-cart" style=" font-size: 20px;"></i>
+            <br>
+            <p class="text-strong">Açougue</p>
+          </center>
+        </div>
+      </div>
+      <div class="col cover radius margin no-padding">
+        <div class="padding border-blue shadow radius mark" onclick="loading_categoria('PADARIA');">
+          <center>
+            <i class="ion-coffee" style=" font-size: 20px;"></i>
+            <br>
+            <p class="text-strong">&nbsp;&nbsp;Padaria&nbsp;&nbsp;</p>
+          </center>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col cover radius margin no-padding" style="margin-left: 8px;">
+        <div class="padding border-blue shadow radius mark" onclick="loading_categoria('VAREJAO');">
+          <center>
+            <i class="ion-ios-nutrition" style=" font-size: 20px;"></i>
+            <br>
+            <p class="text-strong">Feira<br>Livre</p>
+          </center>
+        </div>
+      </div>
+      <div class="col cover radius margin no-padding">
+        <div class="padding border-blue shadow radius mark" onclick="loading_categoria('GAS');">
+          <center>
+            <i class="ion-android-cart" style=" font-size: 20px;"></i>
+            <br>
+            <p class="text-strong text-center">Gás<br>Cozinha</p>
+          </center>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col cover radius margin no-padding" style="margin-left: 8px;">
+        <div class="padding border-blue shadow radius mark" onclick="loading_categoria('PAPELARIA');">
+          <center>
+            <i class="ion-edit" style=" font-size: 20px;"></i>
+            <br>
+            <p class="text-strong">Material<br>Escolar</p>
+          </center>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="page">
+	<div class="header indigo-900 cover blend-soft-light no-border">
+		<div class="left">
+			<button class="icon ion-ios-arrow-back" onclick="backPage()"></button>
+		</div>
+		<h1 class="title align-center">Cotação de Produtos | Carrinho</h1>
+	</div>
+
+	<div class="content has-header">
+		<div class="list padding">
+			<div class="item" data="DADOS_CIDADES">
+				<h2>Cidade: <span style="font-weight: bold;">${cidade}</span></h2>
+			</div>
+			<div class="item" data="DADOS_CIDADES">
+				<h2>Estabelecimento: <span style="font-weight: bold;">${mercado}</span></h2>
+			</div>
+			<div class="item grey-50 mark border-blue margin-button shadow radius" data="CARRINHO_PRODUTOS">
+				<h2 style="font-weight: bold;">${produto}</h2>
+				<div class="right">
+					<table>
+						<tr>
+							<td>
+								<span class="text-small green radius padding">R$ ${preco}</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="text-small red radius padding" style="float: right;" onclick="excluirProduto($$index)">Excluir
+								</span>
+							</td>
+						</tr>
+					</table>
+
+				</div>
+			</div>
+		</div>
+		<div class="list">
+			<div class="item">
+				<button class="green full radius" onclick="carrinho();">Finalizar <i class="ion-paper-airplane"></i></button>
+			</div>
+		</div>
+	</div>
+</div>

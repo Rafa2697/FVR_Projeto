@@ -1,0 +1,29 @@
+<div class="page">
+	<div class="header indigo-900 cover blend-soft-light no-border">
+		<div class="left">
+			<button class="icon ion-ios-arrow-back" onclick="backPage()"></button>
+		</div>
+		<h1 class="title align-center">Consulta de Alunos</h1>
+	</div>
+
+	<div class="content has-header">
+		<div class="list">
+			<div class="item" data="LISTA_ALUNOS">
+                <h2 style="font-weight: bold;">${nome_aluno}</h2>
+                <span class="text-small green radius padding">RA: ${ra_aluno}</span>
+                <span class="text-small blue radius padding">CPF: ${cpf_aluno}</span><br>
+                <span class="text-small ${color} radius padding">Status: ${situacao_aluno}</span>
+                <div class="right">
+                    <table>
+                    	<tr>
+                    		<td><span class="icon ion-checkmark-round" style="color: green;" onclick="aprovar_aluno(${id_aluno})"></span></td>
+                    	</tr>
+                    	<tr>
+                    		<td><span class="icon ion-close-round" style="color: red;" onclick="reprovar_aluno(${id_aluno})"></span></td>
+                    	</tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
